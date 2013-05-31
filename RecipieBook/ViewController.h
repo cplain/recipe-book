@@ -10,4 +10,8 @@
 
 @interface ViewController : UIViewController
 
+
+-(IBAction)fling:(id)sender;
+
+
 @end
