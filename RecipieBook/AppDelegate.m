@@ -18,6 +18,11 @@
     self.viewController = [[SplashScreenViewController alloc] initWithNibName:@"SplashScreenViewController" bundle:nil];
     self.navigController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     
+    
+    UIImage *titleImage = [[UIImage imageNamed:@"orangeTitle.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    [[UINavigationBar appearance] setBackgroundImage:titleImage forBarMetrics:UIBarMetricsDefault];
+
+    
     self.window.rootViewController = self.navigController;
     [self.window makeKeyAndVisible];
     return YES;

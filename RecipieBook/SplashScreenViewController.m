@@ -26,7 +26,7 @@
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)fling:(id)sender
+- (IBAction)moveToMenu:(id)sender
 {
     MainMenuViewController *mainMenu = [[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController" bundle:nil];
     [self.navigationController pushViewController:mainMenu animated:YES];

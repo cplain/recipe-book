@@ -61,7 +61,6 @@
 						<string key="NSFrame">{{29, 0}, {94, 199}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -206,11 +205,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">fling:</string>
+						<string key="label">moveToMenu:</string>
 						<reference key="source" ref="920115109"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
-					<int key="connectionID">76</int>
+					<int key="connectionID">82</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -442,7 +441,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">81</int>
+			<int key="maxID">82</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -458,13 +457,13 @@
 					<string key="className">SplashScreenViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">fling:</string>
+						<string key="NS.key.0">moveToMenu:</string>
 						<string key="NS.object.0">id</string>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">fling:</string>
+						<string key="NS.key.0">moveToMenu:</string>
 						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">fling:</string>
+							<string key="name">moveToMenu:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</object>

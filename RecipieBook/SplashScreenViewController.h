@@ -11,7 +11,7 @@
 @interface SplashScreenViewController : UIViewController
 
 
--(IBAction)fling:(id)sender;
+-(IBAction)moveToMenu:(id)sender;
 
 
 @end
