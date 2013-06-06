@@ -8,6 +8,7 @@
 
 #import "MainMenuViewController.h"
 #import "BrowsePageViewController.h"
+#import "AddPageViewController.h"
 
 @interface MainMenuViewController ()
 
@@ -41,7 +42,7 @@
             break;
             
         case 4:
-            //Add recipes
+            [self moveToAdd];
             break;
             
     }
@@ -84,6 +85,12 @@
     BrowsePageViewController *browse = [[BrowsePageViewController alloc] initWithNibName:@"BrowsePageViewController" bundle:nil];
     browse.searchKey = searchKey;
     [self.navigationController pushViewController:browse animated:YES];
+}
+
+-(void)moveToAdd
+{
+    AddPageViewController *add = [[AddPageViewController alloc] initWithNibName:@"AddPageViewController" bundle:nil];
+    [self.navigationController pushViewController:add animated:YES];
 }
 
 @end
