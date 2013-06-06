@@ -10,4 +10,6 @@
 
 @interface BrowsePageViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet UILabel *hiLabel;
+
 @end

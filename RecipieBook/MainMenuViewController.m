@@ -7,8 +7,13 @@
 //
 
 #import "MainMenuViewController.h"
+#import "BrowsePageViewController.h"
 
-@implementation MainMenu
+@interface MainMenuViewController ()
+
+@end
+
+@implementation MainMenuViewController
 
 @synthesize browseButton;
 @synthesize catergoriesButton;
@@ -23,9 +28,20 @@
     
     {
     
-        case 0:
-            break;
         case 1:
+            [self moveToBrowse];
+            break;
+            
+        case 2:
+            //Catergories
+            break;
+        
+        case 3:
+            //Favourites
+            break;
+            
+        case 4:
+            //Add recipes
             break;
             
     }
@@ -34,14 +50,14 @@
 
 -(void)viewDidLoad
 {
-    [self setUpView];    
+    [self setUpView];
 }
 
 - (void)setUpView
 {
     self.navigationController.navigationBarHidden = FALSE;
     self.navigationItem.hidesBackButton = TRUE;
-    self.title = @"Menu";
+    self.title = @"What's on the menu?";
     
     [self setUpButtons];
 }
@@ -61,6 +77,12 @@
     
     [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
     [button setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
+}
+
+-(void)moveToBrowse
+{
+    BrowsePageViewController *browse = [[BrowsePageViewController alloc] initWithNibName:@"BrowsePageViewController" bundle:nil];
+    [self.navigationController pushViewController:browse animated:YES];
 }
 
 @end

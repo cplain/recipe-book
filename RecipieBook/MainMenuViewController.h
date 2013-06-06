@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Coby Plain. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface MainMenu : UIViewController
+@interface MainMenuViewController : UIViewController
 
 -(IBAction)buttonPressed:(id)sender;
 
