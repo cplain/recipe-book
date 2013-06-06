@@ -1,5 +1,5 @@
 //
-//  BrowsePageViewController.h
+//  CatergoriesPageViewController.h
 //  RecipieBook
 //
 //  Created by Coby Plain on 6/06/13.
@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BrowsePageViewController : UIViewController
+@interface CatergoriesPageViewController : UIViewController
 
 @property (nonatomic, retain) NSMutableArray *recipeList;
 @property (nonatomic, retain) NSMutableArray *recipeNameList;
-@property (nonatomic, retain) NSString *searchKey;
 
 @end

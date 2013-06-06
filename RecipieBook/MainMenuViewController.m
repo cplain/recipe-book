@@ -29,11 +29,11 @@
     {
     
         case 1:
-            [self moveToBrowse];
+            [self moveToBrowse: @"Recipe name"];
             break;
             
         case 2:
-            //Catergories
+            [self moveToBrowse: @"Catergory"];
             break;
         
         case 3:
@@ -79,9 +79,10 @@
     [button setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
 }
 
--(void)moveToBrowse
+-(void)moveToBrowse:(NSString*)searchKey
 {
     BrowsePageViewController *browse = [[BrowsePageViewController alloc] initWithNibName:@"BrowsePageViewController" bundle:nil];
+    browse.searchKey = searchKey;
     [self.navigationController pushViewController:browse animated:YES];
 }
 

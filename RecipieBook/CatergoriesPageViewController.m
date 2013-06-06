@@ -1,22 +1,21 @@
 //
-//  BrowsePageViewController.m
+//  CatergoriesPageViewController.m
 //  RecipieBook
 //
 //  Created by Coby Plain on 6/06/13.
 //  Copyright (c) 2013 Coby Plain. All rights reserved.
 //
 
-#import "BrowsePageViewController.h"
+#import "CatergoriesPageViewController.h"
 
-@interface BrowsePageViewController ()
+@interface CatergoriesPageViewController ()
 
 @end
 
-@implementation BrowsePageViewController
+@implementation CatergoriesPageViewController
 
 @synthesize recipeList;
 @synthesize recipeNameList;
-@synthesize searchKey;
 
 - (void)viewDidLoad
 {
@@ -30,6 +29,7 @@
     [super didReceiveMemoryWarning];
 }
 
+
 - (void)readPList
 {
     NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:@"RecipeList" ofType:@"plist"];    self.recipeList = [[NSMutableArray arrayWithContentsOfFile:plistCatPath] copy];
@@ -37,7 +37,7 @@
     
     for (int i = 0; i < [self.recipeList count]; i++)
     {
-        NSString *recipe = [[self.recipeList objectAtIndex:i] valueForKey:self.searchKey];
+        NSString *recipe = [[self.recipeList objectAtIndex:i] valueForKey:@"Recipe name"];
         [self.recipeNameList addObject:recipe];
     }
 }
@@ -60,5 +60,6 @@
     cell.textLabel.text = [self.recipeNameList objectAtIndex:indexPath.row];
     return cell;
 }
+
 
 @end
