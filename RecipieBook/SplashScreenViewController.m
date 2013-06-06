@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Coby Plain. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "MainMenu.h"
+#import "SplashScreenViewController.h"
+#import "MainMenuViewController.h"
 
 @interface ViewController ()
 
