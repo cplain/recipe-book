@@ -104,6 +104,18 @@
 
 - (void)tableView: (UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *)indexPath
 {
+    if ([self.searchKey isEqualToString:@"Recipe name"])
+        [self isNameAndPressedRow:indexPath];
+    else
+        [self isCatAndPressedRow:indexPath];
+}
+
+-(void)isNameAndPressedRow: (NSIndexPath *)indexPath
+{
+}
+
+-(void)isCatAndPressedRow: (NSIndexPath *)indexPath
+{
     NSString *catName = [self.recipeNameList objectAtIndex:indexPath.row];
     
     NSMutableArray *catContentsArray = [[NSMutableArray alloc] init];
@@ -113,7 +125,7 @@
         if([[[self.recipeList objectAtIndex:i] valueForKey:self.searchKey] isEqualToString:catName])
             [catContentsArray addObject:[self.recipeList objectAtIndex:i]];
     }
-             
+    
     BrowsePageViewController *browse = [[BrowsePageViewController alloc] initWithNibName:@"BrowsePageViewController" bundle:nil];
     browse.searchKey = @"List provided";
     browse.recipeList = catContentsArray;
