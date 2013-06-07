@@ -21,8 +21,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self readPList];
     
+    self.recipeNameList = self.recipeNameList ? self.recipeNameList:[NSMutableArray array];
+    
+    if (![self.searchKey isEqualToString:@"List provided"])
+    {
+        [self readPList];
+    }
+    else
+    {
+        self.searchKey = @"Recipe name";
+        [self produceCompleteList];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,7 +54,6 @@
     NSPropertyListFormat format;
     
     self.recipeList = (NSMutableArray *)[NSPropertyListSerialization propertyListFromData:plistXML mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&errorDesc];
-    self.recipeNameList = self.recipeNameList ? self.recipeNameList:[NSMutableArray array];
     
     if([self.searchKey isEqualToString:@"Recipe name"])
         [self produceCompleteList];
@@ -91,6 +100,24 @@
     
     cell.textLabel.text = [self.recipeNameList objectAtIndex:indexPath.row];
     return cell;
+}
+
+- (void)tableView: (UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *)indexPath
+{
+    NSString *catName = [self.recipeNameList objectAtIndex:indexPath.row];
+    
+    NSMutableArray *catContentsArray = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < [self.recipeList count]; i++)
+    {
+        if([[[self.recipeList objectAtIndex:i] valueForKey:self.searchKey] isEqualToString:catName])
+            [catContentsArray addObject:[self.recipeList objectAtIndex:i]];
+    }
+             
+    BrowsePageViewController *browse = [[BrowsePageViewController alloc] initWithNibName:@"BrowsePageViewController" bundle:nil];
+    browse.searchKey = @"List provided";
+    browse.recipeList = catContentsArray;
+    [self.navigationController pushViewController:browse animated:YES];
 }
 
 @end
