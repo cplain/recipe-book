@@ -116,6 +116,8 @@
     else
         NSLog(@"Error in saveData: %@", error);
     
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 -(void)keyboardWasShown:(NSNotification *)notification
