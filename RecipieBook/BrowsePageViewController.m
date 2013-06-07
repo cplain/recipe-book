@@ -46,11 +46,32 @@
     self.recipeList = (NSMutableArray *)[NSPropertyListSerialization propertyListFromData:plistXML mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&errorDesc];
     self.recipeNameList = self.recipeNameList ? self.recipeNameList:[NSMutableArray array];
     
+    if([self.searchKey isEqualToString:@"Recipe name"])
+        [self produceCompleteList];
+    else
+        [self produceNoCopysList];
+}
+
+- (void)produceCompleteList
+{
     for (int i = 0; i < [self.recipeList count]; i++)
     {
         NSString *recipe = [[self.recipeList objectAtIndex:i] valueForKey:self.searchKey];
         [self.recipeNameList addObject:recipe];
     }
+}
+
+-(void)produceNoCopysList
+{
+    NSMutableSet *tempSet = [[NSMutableSet alloc]init];
+    
+    for (int i = 0; i < [self.recipeList count]; i++)
+    {
+        NSString *recipe = [[self.recipeList objectAtIndex:i] valueForKey:self.searchKey];
+        [tempSet addObject:recipe];
+    }
+    
+    self.recipeNameList = [NSMutableArray arrayWithArray:[tempSet allObjects]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

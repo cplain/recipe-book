@@ -136,7 +136,6 @@
     
     CGRect viewableAreaFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight - keyboardHeight);
     [self.scrollView setFrame:viewableAreaFrame];
-    
 }
 
 -(void)keyboardWillHide:(NSNotification *)notification{
