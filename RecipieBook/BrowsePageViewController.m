@@ -32,7 +32,18 @@
 
 - (void)readPList
 {
-    NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:@"RecipeList" ofType:@"plist"];    self.recipeList = [[NSMutableArray arrayWithContentsOfFile:plistCatPath] copy];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [paths objectAtIndex:0];
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"RecipeList.plist"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
+        plistPath = [[NSBundle mainBundle] pathForResource:@"RecipeList" ofType:@"plist"];
+    
+    NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
+    NSString *errorDesc = nil;
+    NSPropertyListFormat format;
+    
+    self.recipeList = (NSMutableArray *)[NSPropertyListSerialization propertyListFromData:plistXML mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&errorDesc];
     self.recipeNameList = self.recipeNameList ? self.recipeNameList:[NSMutableArray array];
     
     for (int i = 0; i < [self.recipeList count]; i++)
