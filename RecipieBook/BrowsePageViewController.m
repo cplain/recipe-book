@@ -22,6 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configureTitle];
     
     self.recipeNameList = self.recipeNameList ? self.recipeNameList:[NSMutableArray array];
     
@@ -39,6 +40,16 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+-(void)configureTitle
+{
+    NSString *title = @"Recipes";
+    
+    if ([self.searchKey isEqualToString:@"Catergory"])
+        title = @"Catergories";
+        
+    self.title = title;
 }
 
 - (void)readPList

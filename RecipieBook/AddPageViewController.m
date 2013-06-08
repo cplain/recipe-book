@@ -33,6 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Add recipe";
     [self addButtonImage:saveButton];
     [self readPList];
     

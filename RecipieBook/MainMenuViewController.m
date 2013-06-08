@@ -58,7 +58,7 @@
 {
     self.navigationController.navigationBarHidden = FALSE;
     self.navigationItem.hidesBackButton = TRUE;
-    self.title = @"What's on the menu?";
+    self.title = @"On the menu";
     
     [self setUpButtons];
 }

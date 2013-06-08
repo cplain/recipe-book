@@ -19,6 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = [self.recipe valueForKey:@"Recipe name"];
 }
 
 - (void)didReceiveMemoryWarning
