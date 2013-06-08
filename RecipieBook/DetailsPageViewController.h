@@ -11,5 +11,10 @@
 @interface DetailsPageViewController : UIViewController
 
 @property(nonatomic, retain) NSDictionary *recipe;
+@property(nonatomic, retain) IBOutlet UILabel *difficultyField;
+@property(nonatomic, retain) IBOutlet UILabel *prepTimeField;
+@property(nonatomic, retain) IBOutlet UILabel *cookTimeField;
+@property(nonatomic, retain) IBOutlet UITextView *ingredientsField;
+@property(nonatomic, retain) IBOutlet UITextView *methodField;
 
 @end
