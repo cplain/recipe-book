@@ -7,6 +7,7 @@
 //
 
 #import "BrowsePageViewController.h"
+#import "DetailsPageViewController.h"
 
 @interface BrowsePageViewController ()
 
@@ -112,6 +113,23 @@
 
 -(void)isNameAndPressedRow: (NSIndexPath *)indexPath
 {
+    NSString *recipeName = [self.recipeNameList objectAtIndex:indexPath.row];
+    NSDictionary *selectedRecipe = [[NSDictionary alloc] init];
+    
+    for (int i = 0; i < [self.recipeList count]; i++)
+    {
+        if([[[self.recipeList objectAtIndex:i] valueForKey:self.searchKey] isEqualToString:recipeName])
+        {
+            selectedRecipe = [self.recipeList objectAtIndex:i];
+            break;
+        }
+    }
+    
+    DetailsPageViewController *detailsPage = [[DetailsPageViewController alloc] initWithNibName:@"DetailsPageViewController" bundle:nil];
+    
+    detailsPage.recipe = selectedRecipe;
+    [self.navigationController pushViewController:detailsPage animated:YES];
+    
 }
 
 -(void)isCatAndPressedRow: (NSIndexPath *)indexPath
