@@ -27,14 +27,11 @@
     self.recipeNameList = self.recipeNameList ? self.recipeNameList:[NSMutableArray array];
     
     if (![self.searchKey isEqualToString:@"List provided"])
-    {
         [self readPList];
-    }
+    
     else
-    {
-        self.searchKey = @"Recipe name";
         [self produceCompleteList];
-    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,15 +66,19 @@
     
     if([self.searchKey isEqualToString:@"Recipe name"])
         [self produceCompleteList];
-    else
+    
+    else if ([self.searchKey isEqualToString:@"Catergory"])
         [self produceNoCopysList];
+    
+    else if ([self.searchKey isEqualToString:@"Favorite"])
+        [self produceFavoritesList];
 }
 
 - (void)produceCompleteList
 {
     for (int i = 0; i < [self.recipeList count]; i++)
     {
-        NSString *recipe = [[self.recipeList objectAtIndex:i] valueForKey:self.searchKey];
+        NSString *recipe = [[self.recipeList objectAtIndex:i] valueForKey:@"Recipe name"];
         [self.recipeNameList addObject:recipe];
     }
 }
@@ -88,11 +89,23 @@
     
     for (int i = 0; i < [self.recipeList count]; i++)
     {
-        NSString *recipe = [[self.recipeList objectAtIndex:i] valueForKey:self.searchKey];
-        [tempSet addObject:recipe];
+        NSString *cat = [[self.recipeList objectAtIndex:i] valueForKey:@"Catergory"];
+        [tempSet addObject:cat];
     }
     
     self.recipeNameList = [NSMutableArray arrayWithArray:[tempSet allObjects]];
+}
+
+-(void)produceFavoritesList
+{
+    for (int i = 0; i < [self.recipeList count]; i++)
+    {
+        if ([[[self.recipeList objectAtIndex:i] valueForKey:@"Favorite"] isEqualToString:@"true"])
+        {
+            NSString *recipe = [[self.recipeList objectAtIndex:i] valueForKey:@"Recipe name"];
+            [self.recipeNameList addObject:recipe];
+        }
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -116,10 +129,10 @@
 
 - (void)tableView: (UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *)indexPath
 {
-    if ([self.searchKey isEqualToString:@"Recipe name"])
-        [self isNameAndPressedRow:indexPath];
-    else
+    if ([self.searchKey isEqualToString:@"Catergory"])
         [self isCatAndPressedRow:indexPath];
+    else
+        [self isNameAndPressedRow:indexPath];
 }
 
 -(void)isNameAndPressedRow: (NSIndexPath *)indexPath
@@ -129,7 +142,7 @@
     
     for (int i = 0; i < [self.recipeList count]; i++)
     {
-        if([[[self.recipeList objectAtIndex:i] valueForKey:self.searchKey] isEqualToString:recipeName])
+        if([[[self.recipeList objectAtIndex:i] valueForKey:@"Recipe name"] isEqualToString:recipeName])
         {
             selectedRecipe = [self.recipeList objectAtIndex:i];
             break;
@@ -152,7 +165,7 @@
     
     for (int i = 0; i < [self.recipeList count]; i++)
     {
-        if([[[self.recipeList objectAtIndex:i] valueForKey:self.searchKey] isEqualToString:catName])
+        if([[[self.recipeList objectAtIndex:i] valueForKey:@"Catergory"] isEqualToString:catName])
             [catContentsArray addObject:[self.recipeList objectAtIndex:i]];
     }
     

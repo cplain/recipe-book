@@ -38,7 +38,7 @@
             break;
         
         case 3:
-            //Favourites
+            [self moveToBrowse: @"Favorite"];
             break;
             
         case 4:
