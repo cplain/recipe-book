@@ -139,6 +139,7 @@
     DetailsPageViewController *detailsPage = [[DetailsPageViewController alloc] initWithNibName:@"DetailsPageViewController" bundle:nil];
     
     detailsPage.recipe = selectedRecipe;
+    detailsPage.recipeList = self.recipeList;
     [self.navigationController pushViewController:detailsPage animated:YES];
     
 }

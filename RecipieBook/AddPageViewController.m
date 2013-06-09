@@ -87,6 +87,7 @@
                                                                     self.servesField.text,
                                                                     self.ingredientsField.text,
                                                                     self.methodField.text,
+                                                                    @"false",
                                                                     nil]
                                 
                                                            forKeys:[NSArray arrayWithObjects:
@@ -98,9 +99,8 @@
                                                                     @"Serves",
                                                                     @"Ingredients",
                                                                     @"Method",
+                                                                    @"Favorite",
                                                                     nil]];
-    NSLog(@"recipeDict: %@", recipeDict);
-    NSLog(@"recipeList: %@", self.recipeList);
     
     NSMutableArray *array = [[NSMutableArray alloc]init];
     [array addObjectsFromArray:self.recipeList];
