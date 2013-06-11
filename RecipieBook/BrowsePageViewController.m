@@ -18,20 +18,25 @@
 @synthesize recipeList;
 @synthesize recipeNameList;
 @synthesize searchKey;
+@synthesize tableView;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self configureTitle];
-    
-    self.recipeNameList = self.recipeNameList ? self.recipeNameList:[NSMutableArray array];
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{    
+    self.recipeNameList = [NSMutableArray array];
+
     if (![self.searchKey isEqualToString:@"List provided"])
         [self readPList];
     
     else
         [self produceCompleteList];
     
+    [tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning

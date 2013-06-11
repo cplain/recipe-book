@@ -13,5 +13,6 @@
 @property (nonatomic, retain) NSMutableArray *recipeList;
 @property (nonatomic, retain) NSMutableArray *recipeNameList;
 @property (nonatomic, retain) NSString *searchKey;
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
 
 @end
