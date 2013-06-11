@@ -13,7 +13,7 @@
 @property (nonatomic, retain) NSMutableArray *recipeList;
 @property (nonatomic, retain) IBOutlet UITextField *nameField;
 @property (nonatomic, retain) IBOutlet UITextField *catergoryField;
-@property (nonatomic, retain) IBOutlet UITextField *difficultyField;
+@property (nonatomic, retain) IBOutlet UISegmentedControl *difficultyControl;
 @property (nonatomic, retain) IBOutlet UITextField *prepTimeField;
 @property (nonatomic, retain) IBOutlet UITextField *cookTimeField;
 @property (nonatomic, retain) IBOutlet UITextField *servesField;

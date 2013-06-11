@@ -22,7 +22,7 @@
 @synthesize recipeList;
 @synthesize nameField;
 @synthesize catergoryField;
-@synthesize difficultyField;
+@synthesize difficultyControl;
 @synthesize prepTimeField;
 @synthesize cookTimeField;
 @synthesize ingredientsField;
@@ -81,7 +81,7 @@
     NSDictionary *recipeDict = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:
                                                                     self.nameField.text,
                                                                     self.catergoryField.text,
-                                                                    self.difficultyField.text,
+                                                                    [self getDifficulty],
                                                                     self.prepTimeField.text,
                                                                     self.cookTimeField.text,
                                                                     self.servesField.text,
@@ -119,6 +119,26 @@
     
     [self.navigationController popViewControllerAnimated:YES];
     
+}
+
+-(NSString*)getDifficulty
+{
+    NSString *difficulty = @"Easy";
+    
+    switch ([self.difficultyControl selectedSegmentIndex]) {
+        case 1:
+            difficulty = @"Medium";
+            break;
+        
+        case 2:
+            difficulty = @"Hard";
+            break;
+            
+        default:
+            break;
+    }
+    
+    return difficulty;
 }
 
 -(void)keyboardWasShown:(NSNotification *)notification
