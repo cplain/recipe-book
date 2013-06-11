@@ -50,15 +50,15 @@
     UIButton * starButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
     if ([[self.recipe valueForKey:@"Favorite"] isEqualToString:@"true"]) {
-        [starButton setImage:[UIImage imageNamed:@"star_active.png"] forState:UIControlStateNormal];
+        [starButton setImage:[UIImage imageNamed:@"orangeStarButtonHighlight.png"] forState:UIControlStateNormal];
         [starButton addTarget:self action:@selector(removeFavorite:) forControlEvents:UIControlEventTouchUpInside];
     }
     else {
-        [starButton setImage:[UIImage imageNamed:@"star_inactive.png"] forState:UIControlStateNormal];
+        [starButton setImage:[UIImage imageNamed:@"orangeStarButton.png"] forState:UIControlStateNormal];
         [starButton addTarget:self action:@selector(addFavorite:) forControlEvents:UIControlEventTouchUpInside];
     }
     
-    starButton.frame = CGRectMake(0, 0, 35, 30);
+    starButton.frame = CGRectMake(0, 0, 30, 30);
     UIBarButtonItem * starBarButton = [[UIBarButtonItem alloc] initWithCustomView:starButton];
     self.navigationItem.rightBarButtonItem = starBarButton;
     self.navigationItem.rightBarButtonItem.target=self;
