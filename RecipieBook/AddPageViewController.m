@@ -75,6 +75,12 @@
 
 -(void)commit:(id)sender
 {
+    if (![self allValuesPresent])
+    {
+        [self displayAlert];
+        return;
+    }
+    
     NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsPath = [paths objectAtIndex:0];    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"RecipeList.plist"];
     
@@ -119,6 +125,26 @@
     
     [self.navigationController popViewControllerAnimated:YES];
     
+}
+
+- (BOOL)allValuesPresent
+{
+    return
+    
+    ![self.nameField.text isEqualToString:@""] &&
+    ![self.catergoryField.text isEqualToString:@""] &&
+    ![self.prepTimeField.text isEqualToString:@""] &&
+    ![self.cookTimeField.text isEqualToString:@""] &&
+    ![self.servesField.text isEqualToString:@""] &&
+    ![self.ingredientsField.text isEqualToString:@""] &&
+    ![self.methodField.text isEqualToString:@""];
+
+}
+
+-(void)displayAlert
+{
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Empty fields" message:@"You must fill in all fields before you can save this recipe" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 -(NSString*)getDifficulty
