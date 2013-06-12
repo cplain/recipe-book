@@ -56,8 +56,8 @@
 
 - (void)setUpView
 {
-    self.navigationController.navigationBarHidden = FALSE;
-    self.navigationItem.hidesBackButton = TRUE;
+    self.navigationController.navigationBarHidden = NO;
+    self.navigationItem.hidesBackButton = YES;
     self.title = @"On the menu";
     
     [self setUpButtons];
@@ -82,6 +82,8 @@
 
 -(void)moveToBrowse:(NSString*)searchKey
 {
+        NSLog(@"Back button: %@", self.navigationItem.backBarButtonItem);
+    
     BrowsePageViewController *browse = [[BrowsePageViewController alloc] initWithNibName:@"BrowsePageViewController" bundle:nil];
     browse.searchKey = searchKey;
     [self.navigationController pushViewController:browse animated:YES];

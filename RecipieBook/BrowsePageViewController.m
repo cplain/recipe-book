@@ -24,6 +24,8 @@
 {
     [super viewDidLoad];
     [self configureTitle];
+    [self configureBackButton];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -52,6 +54,30 @@
         title = @"Catergories";
         
     self.title = title;
+}
+
+-(void)configureBackButton
+{
+    NSString *title = @"Back";
+    
+    if ([self.searchKey isEqualToString:@"List provided"])
+        title = @"Catergories";
+    
+    UIImage *buttonImage = [[UIImage imageNamed:@"orangeButton.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"orangeButtonHighlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
+    
+    [backButton setBackgroundImage:buttonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [backButton setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
+  
+    self.navigationItem.leftBarButtonItem = backButton;
+
+}
+
+-(void)back:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)readPList
