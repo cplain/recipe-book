@@ -14,8 +14,8 @@
 @property (nonatomic, retain) IBOutlet UITextField *nameField;
 @property (nonatomic, retain) IBOutlet UITextField *catergoryField;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *difficultyControl;
-@property (nonatomic, retain) IBOutlet UITextField *prepTimeField;
-@property (nonatomic, retain) IBOutlet UITextField *cookTimeField;
+@property (nonatomic, retain) IBOutlet UIButton *prepTimeField;
+@property (nonatomic, retain) IBOutlet UIButton *cookTimeField;
 @property (nonatomic, retain) IBOutlet UITextField *servesField;
 @property (nonatomic, retain) IBOutlet UITextField *ingredientsField;
 @property (nonatomic, retain) IBOutlet UITextField *methodField;
@@ -23,5 +23,6 @@
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 
 -(IBAction)commit:(id)sender;
+-(IBAction)toTime:(id)sender;
 
 @end

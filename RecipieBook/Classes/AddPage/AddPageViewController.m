@@ -8,6 +8,7 @@
 
 #import "AddPageViewController.h"
 #import "AutocompletionTableView.h"
+#import "TimeViewController.h"
 
 @interface AddPageViewController ()
 
@@ -37,6 +38,8 @@
     self.title = @"Add recipe";
     [self configureBackButton];
     [self addButtonImage:saveButton];
+    [self addButtonImage:prepTimeField];
+    [self addButtonImage:cookTimeField];
     [self readPList];
     [self.catergoryField addTarget:[self autoCompleter] action:@selector(textFieldValueChanged:) forControlEvents:UIControlEventEditingChanged];
     
@@ -132,8 +135,8 @@
                                                                     self.nameField.text,
                                                                     self.catergoryField.text,
                                                                     [self getDifficulty],
-                                                                    self.prepTimeField.text,
-                                                                    self.cookTimeField.text,
+                                                                    [[self.prepTimeField titleLabel]text],
+                                                                    [[self.cookTimeField titleLabel]text],
                                                                     self.servesField.text,
                                                                     self.ingredientsField.text,
                                                                     self.methodField.text,
@@ -177,8 +180,8 @@
     
     ![self.nameField.text isEqualToString:@""] &&
     ![self.catergoryField.text isEqualToString:@""] &&
-    ![self.prepTimeField.text isEqualToString:@""] &&
-    ![self.cookTimeField.text isEqualToString:@""] &&
+    ![[[self.prepTimeField titleLabel]text] isEqualToString:@"0 mins"] &&
+    ![[[self.cookTimeField titleLabel]text] isEqualToString:@"0 mins"] &&
     ![self.servesField.text isEqualToString:@""] &&
     ![self.ingredientsField.text isEqualToString:@""] &&
     ![self.methodField.text isEqualToString:@""];
@@ -209,6 +212,19 @@
     }
     
     return difficulty;
+}
+
+-(IBAction)toTime:(id)sender
+{
+    TimeViewController *next = [[TimeViewController alloc]initWithNibName:@"TimeViewController" bundle:nil];
+    
+    if ([sender tag] == 1)
+        next.buttonToMod = self.prepTimeField;
+    else
+        next.buttonToMod = self.cookTimeField;
+    
+    next.mode = [sender tag];
+    [self.navigationController pushViewController:next animated:YES];
 }
 
 -(void)keyboardWasShown:(NSNotification *)notification
