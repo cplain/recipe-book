@@ -30,15 +30,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {    
-    self.recipeNameList = [NSMutableArray array];
-
-    if (![self.searchKey isEqualToString:@"List provided"])
-        [self readPList];
-    
-    else
-        [self produceCompleteList];
-    
-    [tableView reloadData];
+    [self populateList];
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,6 +72,19 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(void)populateList
+{
+    self.recipeNameList = [NSMutableArray array];
+    
+    if (![self.searchKey isEqualToString:@"List provided"])
+        [self readPList];
+    
+    else
+        [self produceCompleteList];
+    
+    [tableView reloadData];
+}
+
 - (void)readPList
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
@@ -96,13 +101,13 @@
     self.recipeList = (NSMutableArray *)[NSPropertyListSerialization propertyListFromData:plistXML mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&errorDesc];
     
     if([self.searchKey isEqualToString:@"Recipe name"])
-        [self produceCompleteList];
-    
-    else if ([self.searchKey isEqualToString:@"Catergory"])
-        [self produceNoCopysList];
-    
-    else if ([self.searchKey isEqualToString:@"Favorite"])
-        [self produceFavoritesList];
+     [self produceCompleteList];
+     
+     else if ([self.searchKey isEqualToString:@"Catergory"])
+     [self produceNoCopysList];
+     
+     else if ([self.searchKey isEqualToString:@"Favorite"])
+     [self produceFavoritesList];
 }
 
 - (void)produceCompleteList
@@ -161,6 +166,35 @@
         [self isCatAndPressedRow:indexPath];
     else
         [self isNameAndPressedRow:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSString *recipeName = [self.recipeNameList objectAtIndex:indexPath.row];
+        
+        for (int i = 0; i < [recipeList count]; i++)
+        {
+            if ([[[self.recipeList objectAtIndex:i]valueForKey:@"Recipe name"]isEqualToString:recipeName])
+                [self.recipeList removeObjectAtIndex:i];
+        }
+        
+        NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsPath = [paths objectAtIndex:0];    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"RecipeList.plist"];
+        NSString *error = nil;
+        NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:self.recipeList format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
+        
+        if(plistData)
+            [plistData writeToFile:plistPath atomically:YES];
+        
+        else
+            NSLog(@"Error in saveData: %@", error);
+        
+        [self populateList];
+    }
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
 }
 
 -(void)isNameAndPressedRow: (NSIndexPath *)indexPath
