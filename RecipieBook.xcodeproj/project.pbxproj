@@ -7,36 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF010EC617605F760082B309 /* AddPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF010EC417605F760082B309 /* AddPageViewController.xib */; };
+		CF1A498817681A2500600D94 /* AutocompletionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A498717681A2500600D94 /* AutocompletionTableView.m */; };
+		CF1A498C17681A3600600D94 /* DetailsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A498A17681A3600600D94 /* DetailsPageViewController.m */; };
+		CF1A498D17681A3600600D94 /* DetailsPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1A498B17681A3600600D94 /* DetailsPageViewController.xib */; };
+		CF1A499017681A4800600D94 /* AddPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A498F17681A4800600D94 /* AddPageViewController.m */; };
+		CF1A499417681A5600600D94 /* BrowsePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A499217681A5600600D94 /* BrowsePageViewController.m */; };
+		CF1A499517681A5600600D94 /* BrowsePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1A499317681A5600600D94 /* BrowsePageViewController.xib */; };
+		CF1A499917681A6700600D94 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A499717681A6700600D94 /* MainMenuViewController.m */; };
+		CF1A499A17681A6700600D94 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1A499817681A6700600D94 /* MainMenuViewController.xib */; };
+		CF1A499E17681A7A00600D94 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A499C17681A7A00600D94 /* SplashScreenViewController.m */; };
+		CF1A499F17681A7A00600D94 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1A499D17681A7A00600D94 /* SplashScreenViewController.xib */; };
+		CF1A49A217681A8600600D94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A49A117681A8600600D94 /* AppDelegate.m */; };
+		CF1A49AD17681AA400600D94 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = CF1A49A317681AA400600D94 /* Background.png */; };
+		CF1A49AE17681AA400600D94 /* menu_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF1A49A417681AA400600D94 /* menu_image.jpg */; };
+		CF1A49AF17681AA400600D94 /* orangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CF1A49A517681AA400600D94 /* orangeButton.png */; };
+		CF1A49B017681AA400600D94 /* orangeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF1A49A617681AA400600D94 /* orangeButton@2x.png */; };
+		CF1A49B117681AA400600D94 /* orangeButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = CF1A49A717681AA400600D94 /* orangeButtonHighlight.png */; };
+		CF1A49B217681AA400600D94 /* orangeButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF1A49A817681AA400600D94 /* orangeButtonHighlight@2x.png */; };
+		CF1A49B317681AA400600D94 /* orangeStarButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CF1A49A917681AA400600D94 /* orangeStarButton.png */; };
+		CF1A49B417681AA400600D94 /* orangeStarButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = CF1A49AA17681AA400600D94 /* orangeStarButtonHighlight.png */; };
+		CF1A49B517681AA400600D94 /* orangeTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = CF1A49AB17681AA400600D94 /* orangeTitle.png */; };
+		CF1A49B617681AA400600D94 /* splash_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF1A49AC17681AA400600D94 /* splash_image.jpg */; };
+		CF1A49BB17681AB200600D94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A49B717681AB100600D94 /* main.m */; };
+		CF1A49BC17681AB200600D94 /* RecipeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF1A49B817681AB100600D94 /* RecipeList.plist */; };
+		CF1A49C317681CC900600D94 /* RecipieBook-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF1A49C217681CC900600D94 /* RecipieBook-Info.plist */; };
 		CF52860A17582A0B000E107C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF52860917582A0B000E107C /* UIKit.framework */; };
 		CF52860C17582A0B000E107C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF52860B17582A0B000E107C /* Foundation.framework */; };
 		CF52860E17582A0B000E107C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF52860D17582A0B000E107C /* CoreGraphics.framework */; };
 		CF52861417582A0B000E107C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF52861217582A0B000E107C /* InfoPlist.strings */; };
-		CF52861617582A0B000E107C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF52861517582A0B000E107C /* main.m */; };
-		CF52861A17582A0B000E107C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF52861917582A0B000E107C /* AppDelegate.m */; };
-		CF52861C17582A0B000E107C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CF52861B17582A0B000E107C /* Default.png */; };
-		CF52861E17582A0C000E107C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF52861D17582A0B000E107C /* Default@2x.png */; };
-		CF52862017582A0C000E107C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF52861F17582A0C000E107C /* Default-568h@2x.png */; };
-		CF52862317582A0C000E107C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF52862217582A0C000E107C /* ViewController.m */; };
-		CF52862617582A0C000E107C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF52862417582A0C000E107C /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF010EC417605F760082B309 /* AddPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddPageViewController.xib; path = Classes/AddPage/AddPageViewController.xib; sourceTree = "<group>"; };
+		CF1A498617681A2500600D94 /* AutocompletionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutocompletionTableView.h; path = Classes/AutoCompleteTableView/AutocompletionTableView.h; sourceTree = "<group>"; };
+		CF1A498717681A2500600D94 /* AutocompletionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutocompletionTableView.m; path = Classes/AutoCompleteTableView/AutocompletionTableView.m; sourceTree = "<group>"; };
+		CF1A498917681A3600600D94 /* DetailsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsPageViewController.h; path = Classes/DetailsPage/DetailsPageViewController.h; sourceTree = "<group>"; };
+		CF1A498A17681A3600600D94 /* DetailsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsPageViewController.m; path = Classes/DetailsPage/DetailsPageViewController.m; sourceTree = "<group>"; };
+		CF1A498B17681A3600600D94 /* DetailsPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailsPageViewController.xib; path = Classes/DetailsPage/DetailsPageViewController.xib; sourceTree = "<group>"; };
+		CF1A498E17681A4800600D94 /* AddPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddPageViewController.h; path = Classes/AddPage/AddPageViewController.h; sourceTree = "<group>"; };
+		CF1A498F17681A4800600D94 /* AddPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddPageViewController.m; path = Classes/AddPage/AddPageViewController.m; sourceTree = "<group>"; };
+		CF1A499117681A5600600D94 /* BrowsePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrowsePageViewController.h; path = Classes/BrowsePage/BrowsePageViewController.h; sourceTree = "<group>"; };
+		CF1A499217681A5600600D94 /* BrowsePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BrowsePageViewController.m; path = Classes/BrowsePage/BrowsePageViewController.m; sourceTree = "<group>"; };
+		CF1A499317681A5600600D94 /* BrowsePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BrowsePageViewController.xib; path = Classes/BrowsePage/BrowsePageViewController.xib; sourceTree = "<group>"; };
+		CF1A499617681A6700600D94 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenuViewController.h; path = Classes/MainMenu/MainMenuViewController.h; sourceTree = "<group>"; };
+		CF1A499717681A6700600D94 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenuViewController.m; path = Classes/MainMenu/MainMenuViewController.m; sourceTree = "<group>"; };
+		CF1A499817681A6700600D94 /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenuViewController.xib; path = Classes/MainMenu/MainMenuViewController.xib; sourceTree = "<group>"; };
+		CF1A499B17681A7A00600D94 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashScreenViewController.h; path = Classes/Splash/SplashScreenViewController.h; sourceTree = "<group>"; };
+		CF1A499C17681A7A00600D94 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashScreenViewController.m; path = Classes/Splash/SplashScreenViewController.m; sourceTree = "<group>"; };
+		CF1A499D17681A7A00600D94 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SplashScreenViewController.xib; path = Classes/Splash/SplashScreenViewController.xib; sourceTree = "<group>"; };
+		CF1A49A017681A8600600D94 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		CF1A49A117681A8600600D94 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		CF1A49A317681AA400600D94 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background.png; path = Images/Background.png; sourceTree = "<group>"; };
+		CF1A49A417681AA400600D94 /* menu_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = menu_image.jpg; path = Images/menu_image.jpg; sourceTree = "<group>"; };
+		CF1A49A517681AA400600D94 /* orangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orangeButton.png; path = Images/orangeButton.png; sourceTree = "<group>"; };
+		CF1A49A617681AA400600D94 /* orangeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "orangeButton@2x.png"; path = "Images/orangeButton@2x.png"; sourceTree = "<group>"; };
+		CF1A49A717681AA400600D94 /* orangeButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orangeButtonHighlight.png; path = Images/orangeButtonHighlight.png; sourceTree = "<group>"; };
+		CF1A49A817681AA400600D94 /* orangeButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "orangeButtonHighlight@2x.png"; path = "Images/orangeButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		CF1A49A917681AA400600D94 /* orangeStarButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orangeStarButton.png; path = Images/orangeStarButton.png; sourceTree = "<group>"; };
+		CF1A49AA17681AA400600D94 /* orangeStarButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orangeStarButtonHighlight.png; path = Images/orangeStarButtonHighlight.png; sourceTree = "<group>"; };
+		CF1A49AB17681AA400600D94 /* orangeTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orangeTitle.png; path = Images/orangeTitle.png; sourceTree = "<group>"; };
+		CF1A49AC17681AA400600D94 /* splash_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = splash_image.jpg; path = Images/splash_image.jpg; sourceTree = "<group>"; };
+		CF1A49B717681AB100600D94 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
+		CF1A49B817681AB100600D94 /* RecipeList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = RecipeList.plist; path = "Supporting Files/RecipeList.plist"; sourceTree = "<group>"; };
+		CF1A49BA17681AB100600D94 /* RecipieBook-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RecipieBook-Prefix.pch"; path = "Supporting Files/RecipieBook-Prefix.pch"; sourceTree = "<group>"; };
+		CF1A49C217681CC900600D94 /* RecipieBook-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "RecipieBook-Info.plist"; path = "Supporting Files/RecipieBook-Info.plist"; sourceTree = "<group>"; };
 		CF52860617582A0B000E107C /* RecipieBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipieBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF52860917582A0B000E107C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CF52860B17582A0B000E107C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CF52860D17582A0B000E107C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CF52861117582A0B000E107C /* RecipieBook-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RecipieBook-Info.plist"; sourceTree = "<group>"; };
 		CF52861317582A0B000E107C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CF52861517582A0B000E107C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CF52861717582A0B000E107C /* RecipieBook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RecipieBook-Prefix.pch"; sourceTree = "<group>"; };
-		CF52861817582A0B000E107C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CF52861917582A0B000E107C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CF52861B17582A0B000E107C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		CF52861D17582A0B000E107C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		CF52861F17582A0C000E107C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		CF52862117582A0C000E107C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CF52862217582A0C000E107C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CF52862517582A0C000E107C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +93,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF010EC117605F490082B309 /* AddPage */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A498E17681A4800600D94 /* AddPageViewController.h */,
+				CF1A498F17681A4800600D94 /* AddPageViewController.m */,
+				CF010EC417605F760082B309 /* AddPageViewController.xib */,
+			);
+			name = AddPage;
+			sourceTree = "<group>";
+		};
+		CF1A49851768189100600D94 /* AutoCompleteTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A498617681A2500600D94 /* AutocompletionTableView.h */,
+				CF1A498717681A2500600D94 /* AutocompletionTableView.m */,
+			);
+			name = AutoCompleteTableView;
+			sourceTree = "<group>";
+		};
+		CF28B9931762D4E000BFDFCA /* DetailsPage */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A498917681A3600600D94 /* DetailsPageViewController.h */,
+				CF1A498A17681A3600600D94 /* DetailsPageViewController.m */,
+				CF1A498B17681A3600600D94 /* DetailsPageViewController.xib */,
+			);
+			name = DetailsPage;
+			sourceTree = "<group>";
+		};
 		CF5285FD17582A0B000E107C = {
 			isa = PBXGroup;
 			children = (
@@ -83,11 +152,8 @@
 		CF52860F17582A0B000E107C /* RecipieBook */ = {
 			isa = PBXGroup;
 			children = (
-				CF52861817582A0B000E107C /* AppDelegate.h */,
-				CF52861917582A0B000E107C /* AppDelegate.m */,
-				CF52862117582A0C000E107C /* ViewController.h */,
-				CF52862217582A0C000E107C /* ViewController.m */,
-				CF52862417582A0C000E107C /* ViewController.xib */,
+				CF52862E17582C5A000E107C /* Classes */,
+				CF52863C175836B4000E107C /* Images */,
 				CF52861017582A0B000E107C /* Supporting Files */,
 			);
 			path = RecipieBook;
@@ -96,15 +162,75 @@
 		CF52861017582A0B000E107C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CF52861117582A0B000E107C /* RecipieBook-Info.plist */,
+				CF1A49C217681CC900600D94 /* RecipieBook-Info.plist */,
+				CF1A49B717681AB100600D94 /* main.m */,
+				CF1A49B817681AB100600D94 /* RecipeList.plist */,
+				CF1A49BA17681AB100600D94 /* RecipieBook-Prefix.pch */,
 				CF52861217582A0B000E107C /* InfoPlist.strings */,
-				CF52861517582A0B000E107C /* main.m */,
-				CF52861717582A0B000E107C /* RecipieBook-Prefix.pch */,
-				CF52861B17582A0B000E107C /* Default.png */,
-				CF52861D17582A0B000E107C /* Default@2x.png */,
-				CF52861F17582A0C000E107C /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF52862E17582C5A000E107C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A49851768189100600D94 /* AutoCompleteTableView */,
+				CF28B9931762D4E000BFDFCA /* DetailsPage */,
+				CF010EC117605F490082B309 /* AddPage */,
+				CF52868E1760165A000E107C /* BrowsePage */,
+				CF52868D17601649000E107C /* MainMenu */,
+				CF52868C17601618000E107C /* Splash */,
+				CF1A49A017681A8600600D94 /* AppDelegate.h */,
+				CF1A49A117681A8600600D94 /* AppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		CF52863C175836B4000E107C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A49A317681AA400600D94 /* Background.png */,
+				CF1A49A417681AA400600D94 /* menu_image.jpg */,
+				CF1A49A517681AA400600D94 /* orangeButton.png */,
+				CF1A49A617681AA400600D94 /* orangeButton@2x.png */,
+				CF1A49A717681AA400600D94 /* orangeButtonHighlight.png */,
+				CF1A49A817681AA400600D94 /* orangeButtonHighlight@2x.png */,
+				CF1A49A917681AA400600D94 /* orangeStarButton.png */,
+				CF1A49AA17681AA400600D94 /* orangeStarButtonHighlight.png */,
+				CF1A49AB17681AA400600D94 /* orangeTitle.png */,
+				CF1A49AC17681AA400600D94 /* splash_image.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		CF52868C17601618000E107C /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A499B17681A7A00600D94 /* SplashScreenViewController.h */,
+				CF1A499C17681A7A00600D94 /* SplashScreenViewController.m */,
+				CF1A499D17681A7A00600D94 /* SplashScreenViewController.xib */,
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		CF52868D17601649000E107C /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A499617681A6700600D94 /* MainMenuViewController.h */,
+				CF1A499717681A6700600D94 /* MainMenuViewController.m */,
+				CF1A499817681A6700600D94 /* MainMenuViewController.xib */,
+			);
+			name = MainMenu;
+			sourceTree = "<group>";
+		};
+		CF52868E1760165A000E107C /* BrowsePage */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A499117681A5600600D94 /* BrowsePageViewController.h */,
+				CF1A499217681A5600600D94 /* BrowsePageViewController.m */,
+				CF1A499317681A5600600D94 /* BrowsePageViewController.xib */,
+			);
+			name = BrowsePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,10 +285,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF52861417582A0B000E107C /* InfoPlist.strings in Resources */,
-				CF52861C17582A0B000E107C /* Default.png in Resources */,
-				CF52861E17582A0C000E107C /* Default@2x.png in Resources */,
-				CF52862017582A0C000E107C /* Default-568h@2x.png in Resources */,
-				CF52862617582A0C000E107C /* ViewController.xib in Resources */,
+				CF010EC617605F760082B309 /* AddPageViewController.xib in Resources */,
+				CF1A498D17681A3600600D94 /* DetailsPageViewController.xib in Resources */,
+				CF1A499517681A5600600D94 /* BrowsePageViewController.xib in Resources */,
+				CF1A499A17681A6700600D94 /* MainMenuViewController.xib in Resources */,
+				CF1A499F17681A7A00600D94 /* SplashScreenViewController.xib in Resources */,
+				CF1A49AD17681AA400600D94 /* Background.png in Resources */,
+				CF1A49AE17681AA400600D94 /* menu_image.jpg in Resources */,
+				CF1A49AF17681AA400600D94 /* orangeButton.png in Resources */,
+				CF1A49B017681AA400600D94 /* orangeButton@2x.png in Resources */,
+				CF1A49B117681AA400600D94 /* orangeButtonHighlight.png in Resources */,
+				CF1A49B217681AA400600D94 /* orangeButtonHighlight@2x.png in Resources */,
+				CF1A49B317681AA400600D94 /* orangeStarButton.png in Resources */,
+				CF1A49B417681AA400600D94 /* orangeStarButtonHighlight.png in Resources */,
+				CF1A49B517681AA400600D94 /* orangeTitle.png in Resources */,
+				CF1A49B617681AA400600D94 /* splash_image.jpg in Resources */,
+				CF1A49BC17681AB200600D94 /* RecipeList.plist in Resources */,
+				CF1A49C317681CC900600D94 /* RecipieBook-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,9 +312,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF52861617582A0B000E107C /* main.m in Sources */,
-				CF52861A17582A0B000E107C /* AppDelegate.m in Sources */,
-				CF52862317582A0C000E107C /* ViewController.m in Sources */,
+				CF1A498817681A2500600D94 /* AutocompletionTableView.m in Sources */,
+				CF1A498C17681A3600600D94 /* DetailsPageViewController.m in Sources */,
+				CF1A499017681A4800600D94 /* AddPageViewController.m in Sources */,
+				CF1A499417681A5600600D94 /* BrowsePageViewController.m in Sources */,
+				CF1A499917681A6700600D94 /* MainMenuViewController.m in Sources */,
+				CF1A499E17681A7A00600D94 /* SplashScreenViewController.m in Sources */,
+				CF1A49A217681A8600600D94 /* AppDelegate.m in Sources */,
+				CF1A49BB17681AB200600D94 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,14 +332,6 @@
 				CF52861317582A0B000E107C /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CF52862417582A0C000E107C /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF52862517582A0C000E107C /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -261,8 +397,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RecipieBook/RecipieBook-Prefix.pch";
-				INFOPLIST_FILE = "RecipieBook/RecipieBook-Info.plist";
+				GCC_PREFIX_HEADER = "RecipieBook/Supporting Files/RecipieBook-Prefix.pch";
+				INFOPLIST_FILE = "RecipieBook/Supporting Files/RecipieBook-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -272,8 +408,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RecipieBook/RecipieBook-Prefix.pch";
-				INFOPLIST_FILE = "RecipieBook/RecipieBook-Info.plist";
+				GCC_PREFIX_HEADER = "RecipieBook/Supporting Files/RecipieBook-Prefix.pch";
+				INFOPLIST_FILE = "RecipieBook/Supporting Files/RecipieBook-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -298,6 +434,7 @@
 				CF52862B17582A0C000E107C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
