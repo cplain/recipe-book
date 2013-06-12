@@ -24,5 +24,6 @@
 
 -(IBAction)commit:(id)sender;
 -(IBAction)toTime:(id)sender;
+-(IBAction)valueChanged:(id)sender;
 
 @end

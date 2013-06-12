@@ -227,6 +227,11 @@
     [self.navigationController pushViewController:next animated:YES];
 }
 
+-(IBAction)valueChanged:(UIStepper *)sender
+{    
+    [self.servesField setText:[NSString stringWithFormat:@"%d", (int)[sender value]]];
+}
+
 -(void)keyboardWasShown:(NSNotification *)notification
 {
     float viewWidth = self.view.frame.size.width;
