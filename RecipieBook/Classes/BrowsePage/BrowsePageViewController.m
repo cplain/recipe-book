@@ -119,10 +119,7 @@
     NSMutableSet *tempSet = [[NSMutableSet alloc]init];
     
     for (int i = 0; i < [self.recipeList count]; i++)
-    {
-        NSString *cat = [[self.recipeList objectAtIndex:i] valueForKey:@"Catergory"];
-        [tempSet addObject:cat];
-    }
+        [tempSet addObject:[[self.recipeList objectAtIndex:i] valueForKey:@"Catergory"]];
     
     self.recipeNameList = [NSMutableArray arrayWithArray:[tempSet allObjects]];
 }

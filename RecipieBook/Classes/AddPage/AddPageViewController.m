@@ -7,6 +7,7 @@
 //
 
 #import "AddPageViewController.h"
+#import "AutocompletionTableView.h"
 
 @interface AddPageViewController ()
 
@@ -37,6 +38,7 @@
     [self configureBackButton];
     [self addButtonImage:saveButton];
     [self readPList];
+    [self.catergoryField addTarget:[self autoCompleter] action:@selector(textFieldValueChanged:) forControlEvents:UIControlEventEditingChanged];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -90,6 +92,29 @@
     
     self.recipeList = (NSMutableArray *)[NSPropertyListSerialization propertyListFromData:plistXML mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&errorDesc];
 
+}
+
+- (AutocompletionTableView *)autoCompleter
+{
+    NSMutableDictionary *options = [NSMutableDictionary dictionaryWithCapacity:2];
+    [options setValue:[NSNumber numberWithBool:YES] forKey:ACOCaseSensitive];
+    [options setValue:nil forKey:ACOUseSourceFont];
+        
+    AutocompletionTableView *autoCompleter = [[AutocompletionTableView alloc] initWithTextField:self.catergoryField inViewController:self withOptions:options];
+    autoCompleter.autoCompleteDelegate = self;
+    autoCompleter.suggestionsDictionary = [self produceNoCopysList];
+    
+    return autoCompleter;
+}
+
+-(NSArray*)produceNoCopysList
+{
+    NSMutableSet *tempSet = [[NSMutableSet alloc]init];
+    
+    for (int i = 0; i < [self.recipeList count]; i++)
+        [tempSet addObject:[[self.recipeList objectAtIndex:i] valueForKey:@"Catergory"]];
+    
+    return [tempSet allObjects];
 }
 
 -(void)commit:(id)sender
