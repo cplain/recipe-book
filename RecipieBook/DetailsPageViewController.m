@@ -59,6 +59,16 @@
 {
     self.title = [self.recipe valueForKey:@"Recipe name"];
     self.difficultyField.text = [self.recipe valueForKey:@"Difficulty"];
+    
+    if ([[self.recipe valueForKey:@"Difficulty"]isEqualToString:@"Easy"])
+        [self.difficultyField setTextColor:[UIColor greenColor]];
+    
+    else if ([[self.recipe valueForKey:@"Difficulty"]isEqualToString:@"Medium"])
+        [self.difficultyField setTextColor:[UIColor yellowColor]];
+    
+    else
+        [self.difficultyField setTextColor:[UIColor redColor]];
+    
     self.prepTimeField.text = [self.recipe valueForKey:@"Time to prep"];
     self.cookTimeField.text = [self.recipe valueForKey:@"Time to cook"];
     self.ingredientsField.text = [self.recipe valueForKey:@"Ingredients"];
