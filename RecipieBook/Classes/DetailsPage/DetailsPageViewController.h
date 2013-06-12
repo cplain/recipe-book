@@ -18,5 +18,6 @@
 @property(nonatomic, retain) IBOutlet UILabel *cookTimeField;
 @property(nonatomic, retain) IBOutlet UITextView *ingredientsField;
 @property(nonatomic, retain) IBOutlet UITextView *methodField;
+@property(nonatomic, retain) IBOutlet UILabel *servesField;
 
 @end

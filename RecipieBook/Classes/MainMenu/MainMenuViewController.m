@@ -82,8 +82,6 @@
 
 -(void)moveToBrowse:(NSString*)searchKey
 {
-        NSLog(@"Back button: %@", self.navigationItem.backBarButtonItem);
-    
     BrowsePageViewController *browse = [[BrowsePageViewController alloc] initWithNibName:@"BrowsePageViewController" bundle:nil];
     browse.searchKey = searchKey;
     [self.navigationController pushViewController:browse animated:YES];

@@ -73,6 +73,8 @@
     self.cookTimeField.text = [self.recipe valueForKey:@"Time to cook"];
     self.ingredientsField.text = [self.recipe valueForKey:@"Ingredients"];
     self.methodField.text = [self.recipe valueForKey:@"Method"];
+    self.servesField.text = [self.recipe valueForKey:@"Serves"];
+
 }
 
 
