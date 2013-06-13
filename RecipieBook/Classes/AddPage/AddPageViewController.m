@@ -180,8 +180,6 @@
     
     ![self.nameField.text isEqualToString:@""] &&
     ![self.catergoryField.text isEqualToString:@""] &&
-    ![[[self.prepTimeField titleLabel]text] isEqualToString:@"0 mins"] &&
-    ![[[self.cookTimeField titleLabel]text] isEqualToString:@"0 mins"] &&
     ![self.servesField.text isEqualToString:@""] &&
     ![self.ingredientsField.text isEqualToString:@""] &&
     ![self.methodField.text isEqualToString:@""];
