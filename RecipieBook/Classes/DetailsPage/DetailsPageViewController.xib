@@ -76,14 +76,14 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">Difficulty:</string>
-								<object class="NSColor" key="IBUITextColor" id="380814358">
+								<object class="NSColor" key="IBUITextColor" id="474265923">
 									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MC43MDE5NjA3ODQzIDAuMjU0OTAxOTYwOCAwLjEwOTgwMzkyMTYAA</bytes>
+									<bytes key="NSRGB">MC45MTQ1MDA5NTY2IDAuMzMzNzk3NjMxOSAwLjE1MzMyMjczMzEAA</bytes>
 								</object>
 								<nil key="IBUIHighlightedColor"/>
-								<object class="NSColor" key="IBUIShadowColor" id="830418144">
+								<object class="NSColor" key="IBUIShadowColor" id="255638575">
 									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MSAwLjc0NDY4MTU2MjggMC4yOTU5NzkxMTU4AA</bytes>
+									<bytes key="NSRGB">MCAwIDAAA</bytes>
 								</object>
 								<string key="IBUIShadowOffset">{1, 1}</string>
 								<int key="IBUIBaselineAdjustment">0</int>
@@ -179,9 +179,9 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">Cook time:</string>
-								<reference key="IBUITextColor" ref="380814358"/>
+								<reference key="IBUITextColor" ref="474265923"/>
 								<nil key="IBUIHighlightedColor"/>
-								<reference key="IBUIShadowColor" ref="830418144"/>
+								<reference key="IBUIShadowColor" ref="255638575"/>
 								<string key="IBUIShadowOffset">{1, 1}</string>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<reference key="IBUIFontDescription" ref="660318045"/>
@@ -203,9 +203,9 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">Ingredients:</string>
-								<reference key="IBUITextColor" ref="380814358"/>
+								<reference key="IBUITextColor" ref="474265923"/>
 								<nil key="IBUIHighlightedColor"/>
-								<reference key="IBUIShadowColor" ref="830418144"/>
+								<reference key="IBUIShadowColor" ref="255638575"/>
 								<string key="IBUIShadowOffset">{1, 1}</string>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<reference key="IBUIFontDescription" ref="660318045"/>
@@ -227,9 +227,9 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">Method:</string>
-								<reference key="IBUITextColor" ref="380814358"/>
+								<reference key="IBUITextColor" ref="474265923"/>
 								<nil key="IBUIHighlightedColor"/>
-								<reference key="IBUIShadowColor" ref="830418144"/>
+								<reference key="IBUIShadowColor" ref="255638575"/>
 								<string key="IBUIShadowOffset">{1, 1}</string>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<reference key="IBUIFontDescription" ref="660318045"/>
@@ -251,9 +251,9 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">Prep time:</string>
-								<reference key="IBUITextColor" ref="380814358"/>
+								<reference key="IBUITextColor" ref="474265923"/>
 								<nil key="IBUIHighlightedColor"/>
-								<reference key="IBUIShadowColor" ref="830418144"/>
+								<reference key="IBUIShadowColor" ref="255638575"/>
 								<string key="IBUIShadowOffset">{1, 1}</string>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<reference key="IBUIFontDescription" ref="660318045"/>
@@ -275,9 +275,9 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">Serves</string>
-								<reference key="IBUITextColor" ref="380814358"/>
+								<reference key="IBUITextColor" ref="474265923"/>
 								<nil key="IBUIHighlightedColor"/>
-								<reference key="IBUIShadowColor" ref="830418144"/>
+								<reference key="IBUIShadowColor" ref="255638575"/>
 								<string key="IBUIShadowOffset">{1, 1}</string>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<reference key="IBUIFontDescription" ref="660318045"/>
@@ -377,7 +377,7 @@
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MSAwLjc0NDY4MTU2MjggMC4yOTU5NzkxMTU4AA</bytes>
+									<bytes key="NSRGB">MC45MTQ1MDA5NTY2IDAuMzMzNzk3NjMxOSAwLjE1MzMyMjczMzEAA</bytes>
 								</object>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -592,7 +592,6 @@
 							<reference ref="599277174"/>
 							<reference ref="877825208"/>
 							<reference ref="296399387"/>
-							<reference ref="231238840"/>
 							<reference ref="894040280"/>
 							<reference ref="800684775"/>
 							<reference ref="135395843"/>
@@ -604,6 +603,7 @@
 							<reference ref="48956499"/>
 							<reference ref="872146878"/>
 							<reference ref="590740764"/>
+							<reference ref="231238840"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>

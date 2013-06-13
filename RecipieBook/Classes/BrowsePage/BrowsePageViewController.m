@@ -43,7 +43,7 @@
     NSString *title = @"Recipes";
     
     if ([self.searchKey isEqualToString:@"Catergory"])
-        title = @"Catergories";
+        title = @"Categories";
         
     self.title = title;
 }
@@ -53,7 +53,7 @@
     NSString *title = @"Back";
     
     if ([self.searchKey isEqualToString:@"List provided"])
-        title = @"Catergories";
+        title = @"Categories";
     
     UIImage *buttonImage = [[UIImage imageNamed:@"orangeButton.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
     UIImage *buttonImageHighlight = [[UIImage imageNamed:@"orangeButtonHighlight.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
