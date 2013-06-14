@@ -959,7 +959,7 @@
 								<string key="keyPath">contentSize</string>
 								<object class="NSValue" key="value">
 									<int key="NS.special">2</int>
-									<string key="NS.sizeval">{320, 1420}</string>
+									<string key="NS.sizeval">{320, 1120}</string>
 								</object>
 							</object>
 						</array>
