@@ -17,8 +17,8 @@
 @property (nonatomic, retain) IBOutlet UIButton *prepTimeField;
 @property (nonatomic, retain) IBOutlet UIButton *cookTimeField;
 @property (nonatomic, retain) IBOutlet UITextField *servesField;
-@property (nonatomic, retain) IBOutlet UITextField *ingredientsField;
-@property (nonatomic, retain) IBOutlet UITextField *methodField;
+@property (nonatomic, retain) IBOutlet UITextView *ingredientsField;
+@property (nonatomic, retain) IBOutlet UITextView *methodField;
 @property (nonatomic, retain) IBOutlet UIButton *saveButton;
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 
