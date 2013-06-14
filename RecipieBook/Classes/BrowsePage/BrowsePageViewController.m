@@ -157,7 +157,7 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-        [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     }
     
     cell.textLabel.text = [self.recipeNameList objectAtIndex:indexPath.row];
