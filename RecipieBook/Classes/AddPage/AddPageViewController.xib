@@ -59,7 +59,7 @@
 					</object>
 					<object class="IBUIScrollView" id="942122862">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">270</int>
+						<int key="NSvFlags">294</int>
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="IBUILabel" id="94964268">
 								<reference key="NSNextResponder" ref="942122862"/>
@@ -603,10 +603,6 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<double key="IBUIContentInset.top">130</double>
-						<double key="IBUIContentInset.bottom">0.0</double>
-						<double key="IBUIContentInset.left">0.0</double>
-						<double key="IBUIContentInset.right">0.0</double>
 						<bool key="IBUIPagingEnabled">YES</bool>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIShowsVerticalScrollIndicator">NO</bool>
@@ -977,7 +973,7 @@
 								<string key="keyPath">contentSize</string>
 								<object class="NSValue" key="value">
 									<int key="NS.special">2</int>
-									<string key="NS.sizeval">{320, 740}</string>
+									<string key="NS.sizeval">{320, 920}</string>
 								</object>
 							</object>
 						</array>
