@@ -149,14 +149,15 @@
     return [recipeNameList count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)myTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    UITableViewCell *cell = [myTableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
     }
     
     cell.textLabel.text = [self.recipeNameList objectAtIndex:indexPath.row];
@@ -232,7 +233,6 @@
     DetailsPageViewController *detailsPage = [[DetailsPageViewController alloc] initWithNibName:@"DetailsPageViewController" bundle:nil];
     
     detailsPage.recipe = selectedRecipe;
-    detailsPage.recipeList = self.recipeList;
     [self.navigationController pushViewController:detailsPage animated:YES];
     
 }

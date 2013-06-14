@@ -25,12 +25,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self readPList];
     [self configureBackButton];
     [self loadFields];
     [self setUpFavoritesButton];
     
     
 }
+
+- (void)readPList
+{
+    //There is no guarantee that the last page had the entire list, thus it mush be read again
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [paths objectAtIndex:0];
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"RecipeList.plist"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
+        plistPath = [[NSBundle mainBundle] pathForResource:@"RecipeList" ofType:@"plist"];
+    
+    NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
+    NSString *errorDesc = nil;
+    NSPropertyListFormat format;
+    
+    self.recipeList = (NSMutableArray *)[NSPropertyListSerialization propertyListFromData:plistXML mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&errorDesc];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
